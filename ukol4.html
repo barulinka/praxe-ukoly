@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Hledej den v týdnu</title>
+</head>
+<body>
+    <h1>Hledej den v týdnu</h1>
+    <label for="cisloDne">Zadejte číslo dne v týdnu (1-7):</label>
+    <input type="number" id="cisloDne" min="1" max="7">
+    <button onclick="zobrazDen()">Zobrazit den</button>
+    <p id="vystup"></p>
+
+    <script>
+        function zobrazDen() {
+            var cisloDne = parseInt(document.getElementById("cisloDne").value);
+            var den;
+
+            switch(cisloDne) {
+                case 1: den = "Pondělí"; break;
+                case 2: den = "Úterý"; break;
+                case 3: den = "Středa"; break;
+                case 4: den = "Čtvrtek"; break;
+                case 5: den = "Pátek"; break;
+                case 6: den = "Sobota"; break;
+                case 7: den = "Neděle"; break;
+                default: den = "Chyba: Zadejte číslo v rozsahu 1-7.";
+            }
+
+            document.getElementById("vystup").innerText = den;
+        }
+    </script>
+</body>
+</html>

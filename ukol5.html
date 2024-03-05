@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fibonacciho posloupnost</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+
+  .container {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li {
+    margin-bottom: 10px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Fibonacciho posloupnost</h1>
+  <ul id="fibonacci-sequence"></ul>
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const sequenceList = document.getElementById("fibonacci-sequence");
+    let a = 0, b = 1, temp;
+
+    let count = 10;
+    while (count > 0) {
+      sequenceList.innerHTML += `<li>${a}</li>`;
+      temp = a + b;
+      a = b;
+      b = temp;
+      count--;
+    }
+  });
+</script>
+</body>
+</html>

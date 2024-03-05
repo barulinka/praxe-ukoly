@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Vyhledejte si měsíc</h2>
+
+<input type="text" id="monthNumber" placeholder="Zadejte číslo měsíce">
+<button onclick="displayMonthName()">Ukázat</button>
+
+<p id="monthName"></p>
+
+<script>
+function displayMonthName() {
+ let monthNumber = document.getElementById("monthNumber").value;
+ let monthName = '';
+
+ switch (monthNumber) {
+   case '1':
+     monthName = 'Leden';
+     break;
+   case '2':
+     monthName = 'Únor';
+     break;
+   case '3':
+     monthName = 'Březen';
+     break;
+   case '4':
+     monthName = 'Duben';
+     break;
+   case '5':
+     monthName = 'Květen';
+     break;
+   case '6':
+     monthName = 'Červen';
+     break;
+   case '7':
+     monthName = 'Červenec';
+     break;
+   case '8':
+     monthName = 'Srpen';
+     break;
+   case '9':
+     monthName = 'Září';
+     break;
+   case '10':
+     monthName = 'Říjen';
+     break;
+   case '11':
+     monthName = 'Listopad';
+     break;
+   case '12':
+     monthName = 'Prosinec';
+     break;
+   default:
+     monthName = 'Neplatné číslo.';
+ }
+
+ document.getElementById("monthName").innerHTML = monthName;
+}
+</script>
+
+</body>
+</html>

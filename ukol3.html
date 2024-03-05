@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heslo</title>
+</head>
+<body>
+  <div>
+    <h1>Zadejte heslo</h1>
+    <input type="password" id="passwordInput">
+    <button onclick="checkPassword()">Potvrdit</button>
+    <p id="message"></p>
+  </div>
+  <script>
+    function checkPassword() {
+      const password = "Heslo"; 
+      const enteredPassword = document.getElementById("passwordInput").value;
+
+      if (enteredPassword === password) {
+        document.getElementById("message").innerText = "Heslo je správné. Přístup povolen.";
+      } else {
+        document.getElementById("message").innerText = "Nesprávné heslo. Zkuste to znovu.";
+      }
+    }
+  </script>
+</body>
+</html>
